@@ -6,7 +6,7 @@
 int is_pid_dir(const struct dirent *entry) {
     const char *p;
 
-    for (p = entry->d_name; *p; p++) {
+    for (p = entry->d_name; *p != '\0'; p++) {
         if (!isdigit(*p))
             return 0;
     }
